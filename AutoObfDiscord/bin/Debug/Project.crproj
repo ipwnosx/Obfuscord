@@ -1,0 +1,12 @@
+<project outputDir="<OUTPUT>" baseDir="<WORKPLACE>" xmlns="http://confuser.codeplex.com">
+  <module path="<NAME>">
+    <rule pattern="true" inherit="false">
+      <protection id="koi" />
+    </rule>
+  </module>
+  <plugin><location>\KOIVM\KoiVM.WatermarkReader.exe</plugin>
+  <plugin><location>\\KOIVM\KoiVM.Confuser.exe</plugin>
+  <plugin><location>\\KOIVM\KoiVM.Confuser.Processor.exe</plugin>
+  <plugin><location>\\KOIVM\KoiVM.dll</plugin>
+  <plugin><location>\\KOIVM\KoiVM.Runtime.dll</plugin>
+</project>
