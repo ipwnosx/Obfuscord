@@ -1,8 +1,5 @@
 ﻿using Discord;
-using Discord.Commands;
-using Discord.Rest;
 using Discord.WebSocket;
-using Microsoft.Extensions.DependencyInjection;
 using SharpCompress.Archives;
 using SharpCompress.Archives.Rar;
 using SharpCompress.Common;
@@ -10,14 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Xml;
 namespace AutoObfDiscord
 {
     class Program
@@ -200,7 +192,7 @@ namespace AutoObfDiscord
         public async Task MainAsync()
         {
             //can be obtained from https://discordapp.com/developers/applications
-            await _client.LoginAsync(Discord.TokenType.Bot, "<Discord Bot Token>");
+            await _client.LoginAsync(TokenType.Bot, "<Discord Bot Token>");
             await _client.StartAsync();
             await Task.Delay(-1);
         }
@@ -359,7 +351,6 @@ namespace AutoObfDiscord
                     #region ZipFiles
                     string zipPackage = Environment.CurrentDirectory + "\\" + randomoutput + "\\" + "Obfuscated.zip";
                     Dictionary<int, string> accFiles = new Dictionary<int, string>();
-                    int thing = 1;
                     /*  foreach (string lol in tuple.Item1)
                       {
                           accFiles.Add(thing, Environment.CurrentDirectory + "\\" + randomworkplace + "\\" + lol);
